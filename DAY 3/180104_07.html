@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>animation-play-state 속성</title>
+    <style media="screen">
+      div {
+        width: 100px;
+        height: 60px;
+        background: red;
+        position: relative;
+        animation: boxmove 5s infinite alternate;
+      }
+      #box1 {
+        animation-direction: ease;
+        animation-delay: 1s;
+      }
+      #box2 {
+        animation-direction: linear;
+        animation-delay: 2s;
+      }
+      #box3 {
+        animation-direction: ease-out;
+        animation-delay: 3s;
+      }
+      @keyframes boxmove {
+        from { left: 0px; }
+        to { left: 300px; }
+      }
+      div:hover {
+        animation-play-state: paused;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box1">애니메이션 박스 1</div>
+    <div id="box2">애니메이션 박스 2</div>
+    <div id="box3">애니메이션 박스 2</div>
+    <p><strong>참고 </strong>IE9 이하 혹은 낮은 버전에서 지원하지 않습니다. </p>
+  </body>
+</html>
